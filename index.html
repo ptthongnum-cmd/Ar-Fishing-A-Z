@@ -2,25 +2,128 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>AR Fishing Game P.1</title>
+    <title>AR Fishing Game A-Z for P.1</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
   <body style="margin: 0px; overflow: hidden;">
     
+    <!-- เปิดโหมดสแกนบาร์โค้ดแบบตัวเลข (Matrix) -->
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
       
+      <!-- ==================== GROUP 1: MARKER มาตรฐาน ==================== -->
+      <!-- A: Hiro Marker (ปลาสีแดง) -->
       <a-marker preset="hiro">
-        <a-text value="A" position="0 1 0" scale="5 5 5" color="#FFD700" align="center" rotation="-90 0 0"></a-text>
-        <a-ellipse cx="0" cy="0" rx="0.6" ry="0.4" color="#FF4500" position="0 0.1 0" rotation="-90 0 0"></a-ellipse>
-        <a-triangle color="#FF4500" vertex-a="-0.6 0.2 0" vertex-b="-0.6 -0.2 0" vertex-c="-1.0 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle>
+        <a-text value="A" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text>
+        <a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#FF4500" position="0 0.1 0" rotation="-90 0 0"></a-ellipse>
+        <a-triangle color="#FF4500" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle>
       </a-marker>
 
+      <!-- B: Kanji Marker (ปลาสีน้ำเงิน) -->
       <a-marker preset="kanji">
-        <a-text value="B" position="0 1 0" scale="5 5 5" color="#FFD700" align="center" rotation="-90 0 0"></a-text>
-        <a-ellipse cx="0" cy="0" rx="0.6" ry="0.4" color="#1E90FF" position="0 0.1 0" rotation="-90 0 0"></a-ellipse>
-        <a-triangle color="#1E90FF" vertex-a="-0.6 0.2 0" vertex-b="-0.6 -0.2 0" vertex-c="-1.0 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle>
+        <a-text value="B" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text>
+        <a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#1E90FF" position="0 0.1 0" rotation="-90 0 0"></a-ellipse>
+        <a-triangle color="#1E90FF" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle>
       </a-marker>
+
+      <!-- ==================== GROUP 2: MATRIX MARKERS (บาร์โค้ดตัวเลข) ==================== -->
+      <!-- สแกนด้วยแผ่นบาร์โค้ดหมายเลขนั้น ๆ -->
+      
+      <!-- C: Barcode 0 (ปลาสีเขียว) -->
+      <a-marker type="barcode" value="0">
+        <a-text value="C" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text>
+        <a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#32CD32" position="0 0.1 0" rotation="-90 0 0"></a-ellipse>
+        <a-triangle color="#32CD32" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle>
+      </a-marker>
+
+      <!-- D: Barcode 1 (ปลาสีส้ม) -->
+      <a-marker type="barcode" value="1">
+        <a-text value="D" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text>
+        <a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#FF8C00" position="0 0.1 0" rotation="-90 0 0"></a-ellipse>
+        <a-triangle color="#FF8C00" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle>
+      </a-marker>
+
+      <!-- E: Barcode 2 (ปลาสีชมพู) -->
+      <a-marker type="barcode" value="2">
+        <a-text value="E" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text>
+        <a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#FF69B4" position="0 0.1 0" rotation="-90 0 0"></a-ellipse>
+        <a-triangle color="#FF69B4" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle>
+      </a-marker>
+
+      <!-- F: Barcode 3 (ปลาสีม่วง) -->
+      <a-marker type="barcode" value="3">
+        <a-text value="F" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text>
+        <a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#9400D3" position="0 0.1 0" rotation="-90 0 0"></a-ellipse>
+        <a-triangle color="#9400D3" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle>
+      </a-marker>
+
+      <!-- G: Barcode 4 (ปลาสีเหลือง) -->
+      <a-marker type="barcode" value="4">
+        <a-text value="G" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text>
+        <a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#FFD700" position="0 0.1 0" rotation="-90 0 0"></a-ellipse>
+        <a-triangle color="#FFD700" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle>
+      </a-marker>
+
+      <!-- H: Barcode 5 (ปลาสีฟ้าเขียว) -->
+      <a-marker type="barcode" value="5">
+        <a-text value="H" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text>
+        <a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#00CED1" position="0 0.1 0" rotation="-90 0 0"></a-ellipse>
+        <a-triangle color="#00CED1" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle>
+      </a-marker>
+
+      <!-- I: Barcode 6 -->
+      <a-marker type="barcode" value="6"><a-text value="I" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#FF4500" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#FF4500" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- J: Barcode 7 -->
+      <a-marker type="barcode" value="7"><a-text value="J" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#1E90FF" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#1E90FF" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- K: Barcode 8 -->
+      <a-marker type="barcode" value="8"><a-text value="K" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#32CD32" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#32CD32" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- L: Barcode 9 -->
+      <a-marker type="barcode" value="9"><a-text value="L" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#FF8C00" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#FF8C00" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- M: Barcode 10 -->
+      <a-marker type="barcode" value="10"><a-text value="M" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#FF69B4" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#FF69B4" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- N: Barcode 11 -->
+      <a-marker type="barcode" value="11"><a-text value="N" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#9400D3" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#9400D3" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- O: Barcode 12 -->
+      <a-marker type="barcode" value="12"><a-text value="O" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#00CED1" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#00CED1" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- P: Barcode 13 -->
+      <a-marker type="barcode" value="13"><a-text value="P" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#FFD700" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#FFD700" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- Q: Barcode 14 -->
+      <a-marker type="barcode" value="14"><a-text value="Q" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#FF4500" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#FF4500" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- R: Barcode 15 -->
+      <a-marker type="barcode" value="15"><a-text value="R" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#1E90FF" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#1E90FF" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- S: Barcode 16 -->
+      <a-marker type="barcode" value="16"><a-text value="S" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#32CD32" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#32CD32" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- T: Barcode 17 -->
+      <a-marker type="barcode" value="17"><a-text value="T" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#FF8C00" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#FF8C00" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- U: Barcode 18 -->
+      <a-marker type="barcode" value="18"><a-text value="U" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#FF69B4" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#FF69B4" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></marker>
+
+      <!-- V: Barcode 19 -->
+      <a-marker type="barcode" value="19"><a-text value="V" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#9400D3" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#9400D3" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- W: Barcode 20 -->
+      <a-marker type="barcode" value="20"><a-text value="W" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#00CED1" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#00CED1" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- X: Barcode 21 -->
+      <a-marker type="barcode" value="21"><a-text value="X" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#FFD700" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#FFD700" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- Y: Barcode 22 -->
+      <a-marker type="barcode" value="22"><a-text value="Y" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#FF4500" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#FF4500" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
+
+      <!-- Z: Barcode 23 -->
+      <a-marker type="barcode" value="23"><a-text value="Z" position="0 1 0" scale="6 6 6" color="#FFD700" align="center" rotation="-90 0 0"></a-text><a-ellipse cx="0" cy="0" rx="0.7" ry="0.45" color="#1E90FF" position="0 0.1 0" rotation="-90 0 0"></a-ellipse><a-triangle color="#1E90FF" vertex-a="-0.7 0.25 0" vertex-b="-0.7 -0.25 0" vertex-c="-1.1 0 0" position="0 0.1 0" rotation="-90 0 0"></a-triangle></a-marker>
 
       <a-entity camera></a-entity>
     </a-scene>
